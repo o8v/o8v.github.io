@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width">
+
+<style>
+html { font-size: 62.5%; }
+
+body {
+  color: #222;
+  font: normal 2rem / 1.5 Tahoma, sans-serif;  
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+}
+
+h1, h2 { margin-top: 0; margin-bottom: 0.5rem; font-weight: 300; }
+h1 { font-size: 4rem; }
+h2 { font-size: 3.6rem; }
+
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+</style>
+
+</head>
+<body>
+<h1>Типы данных, целочисленная арифметика</h1>
+<h2>Числа</h2>
+<p>Целые и вещественные числа можно складывать, вычитать, умножать, делить и возводить в степень.</p>
+<pre><code>7 + 2
+7 - 2
+7 * 2
+7 / 2
+7 // 2
+7 % 2
+7 ** 2
+49 ** 0.5
+abs(-7.3)
+abs(7)
+</code></pre>
+<p>Результатом целочисленного деления всегда будет целое цисло (хотя представлено оно может быть как вещественное). При этом округление происходит в меньшую сторону.</p>
+<pre><code>8 / 3
+8 // 3
+
+8 / -3
+8 // -3
+
+-8 / 3
+-8 // 3
+
+7.3 / 3.6
+7.3 // 3.6
+</code></pre>
+<p>Следствием такого округления является то, что при делении числа А на число Б, остаток (если он не ноль) имеет такой же знак, как и число Б.</p>
+<pre><code>-8 % 3
+-8 % -3
+8 % -3
+-7.3 % 2.7
+</code></pre>
+<p>У целых чисел нет ограничения на допустимый диапазон.</p>
+<pre><code>2 ** 1000
+</code></pre>
+<h2>Строки</h2>
+<p>Строка это неизменяемая последовательность символов, которую можно задать тремя способами.</p>
+<pre><code>a = &#39;allows embedded &quot;double&quot; quotes&#39;
+b =  &quot;allows embedded &#39;single&#39; quotes&quot;
+c = &#39;&#39;&#39;Three
+       single quotes&#39;&#39;&#39;
+d = &quot;&quot;&quot;Three
+       double
+quotes&quot;&quot;&quot; 
+</code></pre>
+<p>Строки можно складывать и умножать на число</p>
+<pre><code>&#39;abc&#39; + &#39;abc&#39; + &#39;abc&#39;
+&quot;abc&quot; * 3
+</code></pre>
+<h2>Преобразования между типами</h2>
+<p>Тип можно узнать с помощью команды type.</p>
+<pre><code>type(3)
+type(3.0)
+type(&quot;3&quot;)
+</code></pre>
+<p>Каждому типу соответсвует команда с таким же имененм, которая преобразует параметр к этому типу. Например, int любой параметр преобразует к целому числу</p>
+<pre><code>int(10)
+int(3.0)
+int(7.4)
+int(7.9)
+int(&quot;-12&quot;)
+int(&quot;3.4&quot;)
+</code></pre>
+<p>Аналогично другие команды.</p>
+<pre><code>float(&quot;3.4&quot;)
+str(23)
+</code></pre>
+<h2>Переменные</h2>
+<p>Значения можно сохранять в переменные и потом использовать</p>
+<pre><code>a = &quot;3&quot;
+b = a * 40
+c = int(b)
+d = c ** 0.5
+c + d
+</code></pre>
+<p>В зависимости от значения, переменные могут быть разного типа.</p>
+<pre><code>type(a)
+type(b)
+type(c)
+type(d)
+</code></pre>
+<h2>Печать</h2>
+<p>Для вывода и печати используется команда print.</p>
+<pre><code>a = 42
+print(&quot;Hello, world!&quot;)
+print(&quot;Hello&quot;, a, &quot;!&quot;)
+print(&quot;Hello&quot;, a, &quot;!&quot;, sep = &quot;::&quot;)
+print(&quot;Hello&quot;, a, &quot;!&quot;, sep = &quot;&quot;, end = &quot;#&quot;)
+print(&quot;Same line&quot;)
+print(&quot;LINE1\n\tLINE2\tLINE3&quot;)
+</code></pre>
+<h2>Чтение</h2>
+<p>Команда input() читает одну строку.</p>
+<pre><code>a = input()
+b = input()
+print(a + b)
+
+x = int(input())
+y = int(input())
+print(x + y)
+</code></pre>
+<h2>Модули</h2>
+<p>Кроме команд доступных по умолчанию, в Питон встроена библиотека различных модулей, которые необходимо подключить перед использованием.</p>
+<pre><code>import math
+math.factorial(3)
+math.hypot(3, 4)
+</code></pre>
+<p>При подключении можно указать имя команды и в дальнейшем не писать имя модуля.</p>
+<pre><code>from random import randint
+randint(1, 10)
+</code></pre>
+</body>
+</html>
