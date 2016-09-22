@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width">
+
+<style>
+html { font-size: 62.5%; }
+body {
+  color: #222;
+  font: normal 2rem / 1.5 Tahoma, sans-serif;  
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+}
+h1, h2 { margin-top: 0; margin-bottom: 0.5rem; font-weight: 300; }
+h1 { font-size: 4rem; }
+h2 { font-size: 3.6rem; }
+
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+</style>
+
+</head>
+<body>
+<h1>Строки</h1>
+<p>Строка это неизменяемая последовательность символов. Кроме операций, которые есть у всех последовательностей, у строк есть свои. Чтобы их вызвать, нужно после имени строки поставить точку и написать имя команды.</p>
+<h2>Поиск</h2>
+<p>Можно искать строки любой длины как с начала, так и с конца.</p>
+<pre><code>&quot;mississippi&quot;.find(&quot;i&quot;)
+&quot;mississippi&quot;.find(&quot;i&quot;, 2)
+&quot;mississippi&quot;.rfind(&quot;i&quot;)
+&quot;mississippi&quot;.find(&quot;miss&quot;)
+&quot;mississippi&quot;.find(&quot;volga&quot;)
+
+&quot;mississippi&quot;.index(&quot;miss&quot;)
+&quot;mississippi&quot;.index(&quot;volga&quot;)
+</code></pre>
+<p>Если не нужна конкретная позиция, а требуется проверить наличие, то можно использовать in.</p>
+<pre><code>&quot;el&quot; in &quot;hello&quot;
+</code></pre>
+<p>Сущеуствуют отдельные команды для проверки, что строка начинается или заканчивается определённым образом.</p>
+<pre><code>&quot;hello&quot;.startswith(&quot;he&quot;)
+&quot;hello&quot;.startswith(&quot;hi&quot;)
+&quot;hello&quot;.endswith(&quot;llo&quot;)
+</code></pre>
+<h2>Ножницы и клей</h2>
+<p>Строку можно разрезать на части (список строк)</p>
+<pre><code>&quot;  12    23   34 &quot;.split()
+&quot;         &quot;.split()
+&quot;01.02.03&quot;.split(&quot;.&quot;)
+</code></pre>
+<p>Или склеить из частей (последовательность строк).</p>
+<pre><code>&quot;++&quot;.join(&quot;abcde&quot;)
+&quot; &quot;.join((&quot;Hello,&quot;, &quot;world!&quot;))
+</code></pre>
+<h2>Разное</h2>
+<p>Здесь рассмотрены не все встроенные операции со строками. Подробнее ищите в документации. Вот еще несколько команд:</p>
+<pre><code>&quot;abracadabra&quot;.replace(&quot;ab&quot;, &quot;ba&quot;)
+&quot;LARGE&quot;.lower()
+&quot;small&quot;.upper()
+&quot;aaaa&quot;.count(&quot;aa&quot;)
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width">
+
+<style>
+html { font-size: 62.5%; }
+body {
+  color: #222;
+  font: normal 2rem / 1.5 Tahoma, sans-serif;  
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+}
+h1, h2 { margin-top: 0; margin-bottom: 0.5rem; font-weight: 300; }
+h1 { font-size: 4rem; }
+h2 { font-size: 3.6rem; }
+
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+</style>
+
+</head>
+<body>
+<h1>Условный оператор, циклы</h1>
+<h2>Логические выражения</h2>
+<p>Для проверки условий используется тип у которого всего два возможных значения: правда и ложь. С этими значениями можно выполнять логические операции.</p>
+<pre><code>False and False
+True or False
+not True
+</code></pre>
+<p>Существуют стандартные команды, которые возвращают значения булева типа. Например, операции сравнения.</p>
+<pre><code>7 &gt; 5
+7 &gt;= 5
+7 &lt; 5
+7 &lt;= 5
+7 == 5
+7 != 5
+2 &lt; 5 &lt;= 7 &lt; 6
+
+a = 3 &gt; 2 and 10 &lt; 5
+a or (5 &gt;= 7)
+</code></pre>
+<p>Преобразовать в булев тип можно с помощью команды <code>bool</code>.</p>
+<pre><code>bool(False)
+bool(True)
+
+bool(0)
+bool(-1)
+
+bool(0.0)
+bool(0.5)
+
+bool(&#39;&#39;)
+bool(&quot;A&quot;)
+</code></pre>
+<p>Значения булева типа также можно рассматривать как целые числа и использовать там, где используются целые числа (например, в арифметических выражениях).</p>
+<pre><code>int(True)
+int(False)
+3 * False + True
+True / (False - 2 * True)
+</code></pre>
+<h2>Условный оператор if</h2>
+<p>С помощью условного оператора можно проверить значение выражения на правдивость.</p>
+<pre><code>if True:
+    print(&quot;YES&quot;)  
+</code></pre>
+<p>Все действия которые необходимо выполнить должны следовать после двоеточия в блоке команд, выделенных отступом.</p>
+<pre><code>if False:
+    print(&quot;NO&quot;)
+    print(&quot;NO&quot;)
+  
+if False:
+    print(&quot;NO&quot;)
+print(&quot;NO&quot;)
+</code></pre>
+<p>Если необходимо при выполнении условия делать одни действия, а иначе другие, то используется else.</p>
+<pre><code>if 7 &gt; 5:
+    print(&quot;A&quot;)
+else:
+    print(&quot;B&quot;)
+</code></pre>
+<p>Полная запись условного оператора позволяет выбрать из нескольких условий.</p>
+<pre><code>x = input()
+if x == &quot;a&quot;:
+    print(&quot;Action A&quot;)
+elif x == &quot;b&quot;:
+    print(&quot;Action B&quot;)
+elif x == &quot;c&quot;:
+    print(&quot;Action C&quot;)
+else:
+    print(&quot;Default action&quot;)
+</code></pre>
+<p>В проверяемом выражении могут использоваться значения любого типа. В этом случае условие выполняется, если результат приведения к булеву типу это «правда».</p>
+<pre><code>x = &quot;&quot;
+y = 10
+
+if x:
+    print(&quot;A&quot;)
+if y:
+    print(&quot;B&quot;)
+if x or y:
+    print(&quot;C&quot;)
+</code></pre>
+<h2>Цикл while</h2>
+<p>Цикл while позволяет выполнять действия пока условие правдиво.</p>
+<pre><code>i = 0
+while i &lt; 10:
+    print(i)
+    i = i + 1
+</code></pre>
+<p>Внутри цикла могут быть команды break и continue. Первая завершает цикл, вторая переходит к следующему шага цикла, игнорируя оставшиеся действия на этом шагу.</p>
+<pre><code>i = 0
+while i &lt; 100:
+    i = i + 1
+    if i &gt; 10:
+      break
+    if i % 2 == 0:
+      continue
+    print(i)
+</code></pre>
+<h2>Цикл for и команда range</h2>
+<p>Цикл for предназначен для того, чтобы перебирать элементы последовательностей. Пока мы знаем один тип последовательностей — это строки.</p>
+<pre><code>for x in &quot;abcde&quot;:
+  print(x)
+</code></pre>
+<p>Чтобы перебрать диапазон целых чисел, необходимо воспользоваться командой range, которая создает последовательность чисел, представляющих диапазон.</p>
+<pre><code>r = range(10)
+for x in r:
+  print(x)
+
+for x in range(3, 10):
+  print(x)
+  
+for x in range(3, 10, 2):
+  print(x)
+  
+for x in range(10, 3, -1):
+  print(x)
+</code></pre>
+<p>Отмечу, что это «ленивая» последовательность и элементы создаются не все сразу, а по мере необходимости.</p>
+<pre><code>for x in range(10**100):
+  if x &gt;= 10:
+    break
+  print(x)
+</code></pre>
+</body>
+</html>
