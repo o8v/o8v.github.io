@@ -1,1 +1,67 @@
-t
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>ЯНАО, региональный этап олимпиады учителей</title>
+  <meta name="viewport" content="width=device-width">
+
+<style>
+html { font-size: 62.5%; }
+body {
+  color: #222;
+  font: normal 2rem / 1.5 Tahoma, sans-serif;  
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+}
+h1, h2 { margin-top: 0; margin-bottom: 0.5rem; font-weight: 300; }
+h1 { font-size: 3.6rem; }
+h2 { font-size: 3rem; }
+a {text-decoration: none; color: #08c;} 
+</style>
+  <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+<h1>Региональный этап олимпиады учителей 2016</h1>
+<h2>Документы</h2>
+<ul>
+<li><a href="files/testing-system.pdf">Инструкция по использованию проверяющей системы</a></li>
+</ul>
+<h2>Пробный тур</h2>
+<p>Пробный тур состоит из задания, условие которого находится в инструкции по использованию проверяющей системы. Перед участием в пробном туре ознакомьтесь с инструкцией.</p>
+<p><a href="http://138.201.158.54/cgi-bin/new-client?contest_id=5">Вход в пробный тур</a></p>
+<h2>Материалы занятия 12 ноября</h2>
+<h3>Задание</h3>
+<ul>
+<li><a href="files/города.txt">Список городов</a></li>
+<li><a href="files/вопросы.txt">Вопросы</a></li>
+</ul>
+<h3>Работа с файлами В Питоне</h3>
+<pre><code># Чтение из файла практически без изменения программы
+import sys
+sys.stdin = open(&quot;города.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
+s = input()
+
+# Запись в файл с помощью print
+f = open(&quot;res.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;)
+print(&quot;Hello, world!&quot;, encoding=&quot;utf-8&quot;)
+f.close()
+
+# Чтения из файла 
+f = open(&quot;города.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
+a = f.readlines()
+f.close()
+
+# Конструкция with
+with open(&#39;output.txt&#39;, &#39;w&#39;) as f:
+    f.write(&#39;Hi there!&#39;)
+</code></pre>
+<h3>Ссылки</h3>
+<ul>
+<li><a href="http://pythontutor.ru/">Сайт Питонтьютор</a></li>
+<li><a href="http://informatics.mccme.ru/moodle/course/view.php?id=156">Курс Д.П. Кириенко</a></li>
+<li><a href="http://www.edu54.ru/upload/files/2016/190216_1.pdf">Презентация К. Полякова по PascalABC.Net</a></li>
+</ul>
+<h2>Контактные данные</h2>
+<p>По вопросам связанным с использованием тестирующей системы необходимо обращаться к Пестову Олегу Александровичу <a href="mailto:oleg.pestov@gmail.com">oleg.pestov@gmail.com</a>. Телефон для срочных вопросов: +7(909)143-57-74.</p>
+</body>
+</html>
