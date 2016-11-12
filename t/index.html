@@ -40,26 +40,6 @@ a {text-decoration: none; color: #08c;}
 <li><a href="files/sort.py">Сортировка по численности</a></li>
 <li><a href="files/same-size.py">Поиск городов с одинаковой численностью</a></li>  
 </ul>
-<h3>Работа с файлами В Питоне</h3>
-<pre><code># Чтение из файла практически без изменения программы
-import sys
-sys.stdin = open(&quot;города.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
-s = input()
-
-# Запись в файл с помощью print
-f = open(&quot;res.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;)
-print(&quot;Hello, world!&quot;, encoding=&quot;utf-8&quot;)
-f.close()
-
-# Чтения из файла 
-f = open(&quot;города.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
-a = f.readlines()
-f.close()
-
-# Конструкция with
-with open(&#39;output.txt&#39;, &#39;w&#39;) as f:
-    f.write(&#39;Hi there!&#39;)
-</code></pre>
 <h3>Ссылки</h3>
 <ul>
 <li><a href="http://pythontutor.ru/">Сайт Питонтьютор</a></li>
