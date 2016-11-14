@@ -85,7 +85,7 @@
      {:mccme 111377, :name "Ходы ферзя"}
      {:mccme 111385, :name "Сапер"}]}]}
  {:id "n16-algo",
-  :name "Алгоритмы",
+  :name "Тренировки по темам",
   :accept true,
   :users
   [{:name "Бакке Егор, 11", :mccme 193732}
