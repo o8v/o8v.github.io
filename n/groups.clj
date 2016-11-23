@@ -1,6 +1,6 @@
 [{:id "n16-python",
   :name "Питон",
-  :accept true,
+  :accept false,
   :users
   [{:name "Бакке Егор, 11", :mccme 193732}
    {:name "Беляев Артем, 10", :mccme 190206}
@@ -84,7 +84,7 @@
      {:mccme 111385, :name "Сапер"}]}]}
  {:id "n16-algo",
   :name "Тренировки по темам",
-  :accept true,
+  :accept false,
   :users
   [{:name "Бакке Егор, 11", :mccme 193732}
    {:name "Беляев Артем, 10", :mccme 190206}
