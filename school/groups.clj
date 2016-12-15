@@ -1,4 +1,20 @@
-[{:id "python",
+[{:id "python2",
+  :name "Питон, уровень 2",
+  :accept true,
+  :users
+  [{:name "Семенова Мария", :mccme 233828}],
+  :contests
+  [{:name "Теория чисел",
+    :problems
+    [{:mccme 199, :name "НОД"}
+     {:mccme 27, :name "Сокращение дроби"}
+     {:mccme 1838, :name "Отрезок"}
+     {:mccme 1037, :name "Представление чисел"}
+     {:mccme 152, :name "Гипотеза Гольдбаха"}
+     {:mccme 404, :name "Кинотеатр"}
+     {:mccme 1453, :name "Полярные единички"}
+     {:mccme 1009, :name "Степень"}]}]}
+ {:id "python",
   :name "Питон",
   :accept true,
   :users
