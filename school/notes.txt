@@ -1,0 +1,182 @@
+Надо порассказывать про print (sep, end)
+split, join
+
+
+Мочалов Никита, 299503
+1.B Факториал можно написать с библиотекой
+1.C Что значит from math import sqrt
+1.D Давай в одну строку (без while)
+1. электронные часы
+print(str(hours) + ' ' + str(minutes))
+1. Пингвины
+
+2 Какое число больше elif без else плохо
+2 Максимум двух чисел. Что это print(a if a >= b else b)
+2 Максимум трех чисел (списки, функции, None)
+2 Сколько совпадает чисел Опять без else
+2 Билеты на метро
+2 Коробки опять не else
+2 ряд 1 print(str(a))
+2 число сочетаний рекурсия
+2 флаги replace
+2 сумма n чисел
+
+
+Андрей Копанев
+1. Последняя цифра  Обращение к последнему элементу строки
+a = int(input())
+leng = len(str(a))
+print(str(a)[leng - 1])
+
+1. Сумма цифр. 
+st = int(input())
+strin = str(st)
+print(int(strin[0]) + int(strin[1]) + int(strin[2]))
+
+Даниил Копытов
+a=int(input())
+b=int(input())
+for x in range(a,b+1):
+    x=str(x)
+    if x[0]==x[-1] and x[1]==x[2]:
+        print(int(x))
+
+Коробки
+a1=int(input())
+b1=int(input())
+c1=int(input())
+a2=int(input())
+b2=int(input())
+c2=int(input())
+ 
+ 
+ 
+if a1>=b1:
+    if b1>=c1:
+        x=a1
+        y=b1
+        z=c1
+    elif a1>=c1:
+        x=a1
+        y=c1
+        z=b1
+    else:
+        x=c1
+        y=a1
+        z=b1
+elif b1>=c1:
+    if a1>=c1:
+        x=b1
+        y=a1
+        z=c1
+    else:
+        x=b1
+        y=c1
+        z=a1
+else:
+    x=c1
+    y=b1
+    z=a1
+ 
+ 
+ 
+if a2>=b2:
+    if b2>=c2:
+        i=a2
+        j=b2
+        k=c2
+    elif a2>=c2:
+        i=a2
+        j=c2
+        k=b2
+    else:
+        i=c2
+        j=a2
+        k=b2
+elif b2>=c2:
+    if a2>=c2:
+        i=b2
+        j=a2
+        k=c2
+    else:
+        i=b2
+        j=c2
+        k=a2
+else:
+    i=c2
+    j=b2
+    k=a2
+ 
+ 
+ 
+if x==i and y==j and z==k:
+    print('Boxes are equal')
+elif x>=i and y>=j and z>=k:
+    print('The first box is larger than the second one')
+elif x<=i and y<=j and z<=k:
+    print('The first box is smaller than the second one')
+else:
+    print('Boxes are incomparable')
+
+
+1. Ход короля
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+if (a**2 - 2*a*c + c**2 + d**2 + b**2 - 2*b*d)**0.5==1 or a**2 - 2*a*c + c**2 + d**2 + b**2 - 2*b*d==2:
+    print ('YES')
+else:
+    print('NO')
+(a**2 - 2*a*c + c**2 + d**2 + b**2 - 2*b*d)**0.5
+
+
+Электронные часы
+t = int(input())
+print("{} {}".format(int(t/60)%24, t%60))
+
+Стоимость покупки
+i = [int(input()) for _ in range(3)]
+print("{} {}".format(i[0]*i[2]+int(i[1]*i[2]/100), i[1]*i[2]%100))
+
+
+Сколько совпадает чисел
+a = int(input())
+b = int(input())
+c = int(input())
+ 
+if   (a == b == c):
+    print("3")
+elif (a == b != c):
+    print("2")
+elif (a != b == c):
+    print("2")
+elif (b != a != c):
+    print("0")
+elif (a == c != b):
+    print("2")
+
+Какое число больше 
+a = int(input())
+b = int(input())
+if a > b:
+    print("1")
+elif a < b:
+    print("2")
+else:
+    print("0")
+
+Максимум двух чисел
+a = int(input())
+b = int(input())
+if a > b :
+    print(int(a))
+elif a < b :
+    print(int(b))
+else :
+    print(int(a))
+	
+
+	
+		
+		
